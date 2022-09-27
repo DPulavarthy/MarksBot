@@ -1,0 +1,24 @@
+[view] div {
+    max-width: 80%;
+    margin: 0 10%;
+}
+
+[view] input,
+textarea {
+    border: 0;
+    padding: 1px 5px;
+    height: 22px;
+    width: 250px;
+    background: var(--elements);
+    color: var(--color);
+    outline: none;
+    border-bottom: 3px solid var(--color);
+    font-size: 18px;
+    margin: auto;
+}
+
+
+[view] div:not([emotes]) {
+    display: flex;
+    justify-content: center;
+}

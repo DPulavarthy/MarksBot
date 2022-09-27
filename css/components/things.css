@@ -1,0 +1,163 @@
+[top] {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition-duration: 200ms;
+    pointer-events: none;
+    z-index: 1;
+}
+
+[top] img {
+    margin: 10px 20px;
+    padding: 10px;
+    content: url(../../assets/static/top.png);
+    max-width: 25px !important;
+    max-height: 25px !important;
+    border-radius: 3px;
+    background: var(--elements);
+    cursor: pointer;
+}
+
+[top]:hover img {
+    background: var(--hover);
+}
+
+
+[preloader] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+}
+
+[preloader] svg {
+    width: 50%;
+    height: 50%;
+    fill: #000;
+    transition-duration: 300ms;
+}
+
+[preloader] svg .cls-1 {
+    fill: var(--elements);
+    transition-duration: 300ms;
+}
+
+[preloader] svg .cls-2 {
+    transition-duration: 300ms;
+}
+
+[preloader].hide {
+    animation: hide 400ms forwards linear;
+}
+
+@keyframes hide {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+[notifications] svg {
+    fill: var(--secondary);
+    width: 15px;
+    height: 15px;
+    filter: drop-shadow(1px 1px 0.5px var(--shadow));
+    margin-right: 5px;
+}
+
+[notifications] a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+[notifications] h1 {
+    display: flex;
+    margin: 0 0 5px 0;
+    font-size: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-flex;
+    white-space: nowrap;
+    width: 220px;
+}
+
+[notifications] h1 p {
+    margin: 0;
+    animation: wave 3s infinite ease;
+    margin-left: 5px;
+}
+
+[notifications] > div > p {
+    margin: 10px 0 5px 0;
+    font-size: 17px;
+}
+
+@keyframes wave {
+    20% {
+        transform: rotate(20deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+}
+
+[notifications] {
+    position: fixed;
+    z-index: 100;
+    right: 20px;
+    bottom: 0;
+    transition-duration: 200ms;
+}
+
+[notifications] > div {
+    padding: 10px;
+    border-radius: 3px;
+    text-shadow: 1px 1px var(--background);
+    width: 250px;
+    max-width: 320px;
+    background: var(--green);
+    animation: show 700ms ease forwards;
+    margin-bottom: 10px;
+    transition-duration: 200ms;
+    outline: 2px solid var(--background);
+}
+
+[notifications] hr {
+    border: none;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--background);
+}
+
+[notifications] > div[welcome] {
+    background: var(--elements);
+}
+
+[notifications] [remove] {
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    padding: 5px 10px;
+    background: var(--background);
+    border-radius: 3px;
+    z-index: 1;
+    user-select: none;
+}
+
+[notifications] [remove]:hover {
+    background: var(--secondary);
+}

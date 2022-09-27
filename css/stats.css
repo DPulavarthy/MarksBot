@@ -1,0 +1,38 @@
+div > div {
+    padding: 10px 20px;
+    background: var(--hover);
+    width: max-content;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    transition-duration: 200ms;
+}
+
+div > div:hover {
+    background: var(--elements);
+}
+
+th > div {
+    display: flex;
+    justify-content: center;
+}
+
+tr td:last-child {
+    width: 50%;
+}
+
+[view] input,
+textarea {
+    border: 0;
+    padding: 1px 5px;
+    height: 22px;
+    width: 250px;
+    background: var(--secondary);
+    color: var(--color);
+    outline: none;
+    border-bottom: 3px solid var(--color);
+    font-size: 18px;
+    margin: 10px auto;
+    text-shadow: 1px 1px var(--shadow);
+}

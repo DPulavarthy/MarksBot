@@ -1,0 +1,41 @@
+tr td {
+    pointer-events: auto !important;
+    cursor: auto !important;
+    user-select: auto !important;
+    padding-bottom: 20px;
+}
+
+tbody tr:after {
+    display: none;
+}
+
+thead th {
+    border-radius: 5px !important;
+    cursor: pointer;
+    user-select: none;
+}
+
+td p {
+    width: 80%;
+    margin: 0 auto;
+    transition-duration: 200ms;
+    max-height: auto;
+}
+
+tbody:not(.view) td p {
+    max-height: 0 !important;
+    overflow: hidden !important;
+}
+
+tbody:not(.view) td {
+    height: 0;
+}
+
+table {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+th code {
+    color: var(--color);
+}

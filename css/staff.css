@@ -1,0 +1,98 @@
+.chat div.pfp {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    margin: 20px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    border-radius: 50%;
+}
+
+.chat {
+    width: 80%;
+    margin: 0 10% 20px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.chat > div {
+    background: var(--background);
+    border-radius: 5px;
+}
+
+.chat .author {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 0 10%;
+}
+
+tr td:first-child {
+    text-align: right !important;
+    cursor: auto !important;
+}
+
+tr td:last-child {
+    text-align: left !important;
+}
+
+tr td {
+    padding: 10px 0;
+}
+
+.icons {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.icons img {
+    width: 25px;
+    margin: 0 5px;
+}
+
+.links a [discord] {
+    content: url(../assets/static/discord.svg);
+}
+
+.links a [github] {
+    content: url(../assets/static/github.svg);
+}
+
+.links a [instagram] {
+    content: url(../assets/static/instagram.svg);
+}
+
+.links a [twitter] {
+    content: url(../assets/static/twitter.svg);
+}
+
+.links img {
+    cursor: pointer;
+    width: 50px;
+    max-width: 50px;
+    min-width: 50px;
+}
+
+.links a {
+    margin: 0 10px;
+}
+
+.links {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 10px auto;
+}
+
+.links a svg {
+    vertical-align: top;
+    margin: 1px -15px;
+    background: var(--background);
+    border-radius: 5px 0 5px 5px;
+}

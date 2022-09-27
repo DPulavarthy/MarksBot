@@ -1,0 +1,74 @@
+[view] {
+    background: var(--background);
+}
+
+[view] > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+[view] p {
+    margin: 0 0 10px -10px;
+    font-size: 18px;
+}
+
+[view] input, textarea {
+    border: 0;
+    padding: 1px 5px;
+    height: 22px;
+    width: 250px;
+    background: var(--background);
+    color: var(--color);
+    outline: none;
+    border-bottom: 3px solid var(--color);
+    font-size: 18px;
+}
+
+textarea {
+    height: 200px;
+    width: 500px;
+    border-radius: 5px;
+    border: 3px solid var(--color);
+    font-style: italic;
+    font-weight: normal;
+    font-family: var(--font);
+}
+
+[view] u {
+    text-decoration: none;
+}
+
+[view] label span {
+    outline: 1px solid var(--color);
+}
+
+tr td:nth-child(2) {
+    text-align: left !important;
+    padding-left: 30px;
+    font-family: var(--font) !important;
+}
+
+tr td div.disable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+tr td div {
+    background: var(--background);
+    color: var(--color);
+}
+
+tr td div:hover {
+    background: var(--color);
+    color: var(--background);
+}
+
+td img {
+    margin: 0px 0 -8px 0;
+}
+
+tr td {
+    border-radius: 5px !important;
+}
