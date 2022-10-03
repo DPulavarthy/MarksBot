@@ -132,6 +132,10 @@ nav > input {
     margin: 0;
 }
 
+nav label p {
+    margin: 6px;
+}
+
 @media (max-width: 1100px) {
     nav [mount],
     nav {
