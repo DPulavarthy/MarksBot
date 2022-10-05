@@ -11,7 +11,7 @@ const handler = {
     },
 };
 
-let cache = new Proxy({ scroll: null, mode: null, notif: null, perspective: null, full: null, animations: null }, handler)
+let cache = { scroll: null, mode: null, notif: null, perspective: null, full: null, animations: null }
 
 const ext = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818"><g><path d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728c1.758,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636l86.3-86.3v35.313c0,4.971,4.029,9,9,9s9-4.029,9-9v-57.04C194.818,6.19,190.789,2.161,185.818,2.161z"/></g></svg>'
 $$("[external]").forEach(elem => {
@@ -95,15 +95,18 @@ function toggle(force) {
 }
 
 function animations() {
-    cache.animations = !cache.animations
+    cache.animations = cache.animations ? null : true
     build()
+    $('[mount]').style.transitionDuration = !cache.animations ? '200ms' : '0ms';
+    $('[home]').style.transitionDuration = !cache.animations ? '200ms' : '0ms';
 }
 
 function perspective() {
     if (window.innerWidth < 1200) return
+    let anim = parse() ? parse().animations : false
     const nav = $('[mount]').style.transform === 'none'
-    $('[mount]').style.transitionDuration = !parse().animations ? '200ms' : '0';
-    $('[home]').style.transitionDuration = !parse().animations ? '200ms' : '0';
+    $('[mount]').style.transitionDuration = !anim ? '200ms' : '0ms';
+    $('[home]').style.transitionDuration = !anim ? '200ms' : '0ms';
     $('[mount]').style.transform = nav ? 'perspective(100vw) rotateY(30deg)' : 'none';
     $('[mount]').style.height = nav ? '70vh' : '100vh';
     $('[home]').style.transform = nav ? 'perspective(100vw) rotateY(-10deg)' : 'none';
