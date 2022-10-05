@@ -30,8 +30,6 @@ window.onload = _ => {
     parse()
     build()
 
-    console.log(cache)
-
     if (cache.mode && cache.mode !== mode) toggle()
 
     if (cache.perspective || cache.full) {
@@ -126,7 +124,7 @@ const random = (sections = 5, phrase = 5, join = '-') => {
 };
 
 function parse() {
-    const args = localStorage.getItem('marksbot-cache').split('&') || []
+    const args = localStorage.getItem('marksbot-cache')?.split('&') || []
     if (!args.length) return
     const obj = []
     args.map(e => e.split('=')).map(([key, value]) => obj[key] = value)
